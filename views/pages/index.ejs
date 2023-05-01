@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/effects.css"/>
+</head>
+<body background="/assets/bk.jpeg" class="bg">
+
+    <div class="stuff">
+        <img src="/assets/1.png" id="a1">
+        <img src="/assets/a2.png" id="a2">
+        <img src="/assets/a3.png" id="a3">
+        <img src="/assets/a4.png" id="a4">
+        <img src="/assets/a5.png" id="a5">
+    </div>
+  
+                                                        <!--login -->
+
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+            <div class="login-form">
+                <form action="/log" method="post"class="sign-in-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input" name="username">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password" name="pwd">
+                    </div>
+                   
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign In">
+                    </div>
+                    <div class="hr"></div>
+                </form>
+
+                                                    <!--Sign in-->
+
+                <form action="/sign" method="post" class="sign-up-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input" name="username">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password" name="pwd">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Repeat Password</label>
+                        <input id="pass" type="password" class="input" data-type="password" name="pwd11">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Location</label>
+                        <input id="pass" type="text" class="input" name="location">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Phone Number</label>
+                        <input id="pass" type="text" class="input" name="number">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign Up">
+                    </div>
+                    <div class="hr"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="/scripts/script.js" type="module"></script> 
+    <script src="app.js" type="module"></script> 
+</body>
+</html>

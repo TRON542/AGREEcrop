@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/crops.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--navbar-->
+
+    <nav class="navbar">
+      <div class="logo">
+        <img id="logo_pic" src="/assets/logo.png" />
+        <h3 id="name">AGREEcrop</h3>
+      </div>
+      <div class="namelogo">
+        <p style="letter-spacing: 5px">WELCOME <%= userr.usname %></p>
+      </div>
+      <div class="profile">
+        <img
+          src="/assets/profile.png"
+          class="main_profile"
+          id="main_profile_id"
+        />
+        <p class="prof1">PROFILE</p>
+        <div class="editview">
+          <img
+            src="/assets/eprofile.png"
+            class="edit_profile"
+            id="edit_profile_id"
+          />
+          <img
+            src="/assets/vprofile.jpeg"
+            class="view_profile"
+            id="view_profile_id"
+          />
+        </div>
+      </div>
+    </nav>
+
+    <!--second-->
+
+    <div class="front">
+      <div class="selection">
+        <div class="home" id="home">
+          <form action="/hom" method="post">
+            <button id="home_btn">HOME</button>
+          </form>
+        </div>
+        <div class="crops" id="crops">
+          <form action="/crp" method="post">
+            <button id="crop_btn">CROPS</button>
+          </form>
+        </div>
+        <div class="about" id="about">
+          <form action="/abt" method="post">
+            <button id="abt_btn">ABOUT</button>
+          </form>
+        </div>
+        <div class="contact" id="contact">
+          <form action="/contact" method="post">
+            <button id="contact_btn">CONTACT</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="choose">
+        <div class="searchopt">
+          <form action="/searchname" method="post" class="search">
+            <div class="searchBox">
+              <input
+                class="searchInput"
+                type="text"
+                name="searchnm"
+                placeholder="Search"
+              />
+              <button class="searchButton" >
+                <i class="material-icons"> search </i>
+              </button>
+            </div>
+          </form>
+        </div>
+        
+        <div class="all">
+          <div class="form1">  
+            <form action="/sseason" method="post" class="byseason">
+              <div class="season">SEASON</div>
+              <details class="custom-select">
+                <summary class="radios">
+                  <input
+                    type="radio"
+                    name="season"
+                    id="default"
+                    title=">"
+                    checked
+                  />
+                  <input type="radio" name="item" id="season1" title="KHARIF" value="kharif"/>
+                  <input type="radio" name="item" id="season2" title="ZAID" value="zaid"/>
+                  <input type="radio" name="item" id="season3" title="RABI" value="rabi"/>
+                </summary>
+                <ul class="list">
+                  <li>
+                    <label for="season1">
+                      KHARIF
+                      <span></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label for="season2">ZAID</label>
+                  </li>
+                  <li>
+                    <label for="season3">RABI</label>
+                  </li>
+          
+                </ul>
+              </details>
+              <div class="container">
+                <div class="btn"><button>GO</button>
+              </div>
+            </form>
+          </div>
+          <div class="form2">
+            <form action="/slocation" method="post">
+              <div class="bylocation">
+                <div class="locat">LOCATION</div>
+                <details class="custom-select">
+                  <summary class="radios">
+                    <input
+                      type="radio"
+                      name="location"
+                      id="default"
+                      title=">"
+                      checked
+                    />
+                    <input type="radio" name="item" id="location1" title="Andhra Pradesh" value="Andhra Pradesh"/>
+                    <input type="radio" name="item" id="location2" title="Assam" value="Assam"/>
+                    <input type="radio" name="item" id="location3" title="Bihar" value="Bihar"/>
+                    <input type="radio" name="item" id="location4" title="Chhatisgarh" value="Chhatisgarh"/>
+                    <input type="radio" name="item" id="location5" title="Gujarat" value="Gujarat"/>
+                    <input type="radio" name="item" id="location6" title="Haryana" value="Haryana"/>
+                    <input type="radio" name="item" id="location7" title="Himachal Pradesh" value="Himachal Pradesh"/>
+                    <input type="radio" name="item" id="location8" title="Jammu & Kashmir" value="Jammu & Kashmir"/>
+                    <input type="radio" name="item" id="location9" title="Jharkhand" value="Jharkhand"/>
+                    <input type="radio" name="item" id="location10" title="Karnataka" value="Karnataka"/>
+                    <input type="radio" name="item" id="location11" title="Kerala" value="Kerala"/>
+                    <input type="radio" name="item" id="location12" title="Maharashtra" value="Maharashtra"/>
+                    <input type="radio" name="item" id="location13" title="Madhya Pradesh" value="Madhya Pradesh"/>
+                    <input type="radio" name="item" id="location14" title="North East" value="North East"/>
+                    <input type="radio" name="item" id="location15" title="Odisha" value="Odisha"/>
+                    <input type="radio" name="item" id="location16" title="Punjab" value="Punjab"/>
+                    <input type="radio" name="item" id="location17" title="Rajasthan" value="Rajasthan"/>
+                    <input type="radio" name="item" id="location18" title="Tamil Nadu" value="Tamil Nadu"/>
+                    <input type="radio" name="item" id="location19" title="Uttrakhand" value="Uttrakhand"/>
+                    <input type="radio" name="item" id="location20" title="Uttar Pradesh" value="Uttar Pradesh"/>
+                    <input type="radio" name="item" id="location21" title="West Bengal" value="West Bengal"/>
+                    
+                  </summary>
+                  <ul class="list">
+                    <li>
+                      <label for="location1">
+                        Andhra Pradesh
+                        <span></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label for="location2">Assam</label>
+                    </li>
+                    <li>
+                      <label for="location3">Bihar</label>
+                    </li>
+                    <li>
+                      <label for="location4">Chhatisgarh</label>
+                    </li>
+                    <li>
+                      <label for="location5">Gujarat</label>
+                    </li>
+                    <li>
+                      <label for="location6">Haryana</label>
+                    </li>
+                    <li>
+                      <label for="location7">Himachal Pradesh</label>
+                    </li>
+                    <li>
+                      <label for="location8">Jammu & Kashmir</label>
+                    </li>
+                    <li>
+                      <label for="location9">Jharkhand</label>
+                    </li>
+                    <li>
+                      <label for="location10">Karnataka</label>
+                    </li>
+                    <li>
+                      <label for="location11">Kerala</label>
+                    </li>
+                    <li>
+                      <label for="location12">Maharashtra</label>
+                    </li>
+                    <li>
+                      <label for="location13">Madhya Pradesh</label>
+                    </li>
+                    <li>
+                      <label for="location14">North East</label>
+                    </li>
+                    <var><li>
+                      <label for="location15">Odisha</label>
+                    </li>
+                    <li>
+                      <label for="location16">Punjab</label>
+                    </li>
+                    <li>
+                      <label for="location17">Rajasthan</label>
+                    </li>
+                    <li>
+                      <label for="location18">Tamil Nadu</label>
+                    </li>
+                    <li>
+                      <label for="location19">Uttrakhand</label>
+                    </li>
+                    <li>
+                      <label for="location20">Uttar Pradesh</label>
+                    </li>
+                    <li>
+                      <label for="location21">West Bengal</label>
+                    </li>
+                  
+  
+            
+                  </ul>
+                </details>
+                <div class="container">
+                  <div class="btn"><button>GO</button>
+              </div>
+            </div>
+              </div>
+              <div class="bylocation_2">
+                <div class="empty"><h1>+</h1></div>
+                <details class="custom-select1">
+                  <summary class="radios">
+                    <input
+                      type="radio"
+                      name="location"
+                      id="default"
+                      title=">"
+                      checked
+                    />
+                    <input type="radio" name="item1" id="locati1" title="ALLUVIAL" value="Alluvial"/>
+                    <input type="radio" name="item1" id="locati2" title="RED" value="Red"/>
+                    <input type="radio" name="item1" id="locati3" title="BLACK" value="Black"/>
+                  </summary>
+                  <ul class="list">
+                    <li>
+                      <label for="locati1">
+                        ALLUVIAL
+                        <span></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label for="locati2">RED</label>
+                    </li>
+                    <li>
+                      <label for="locati3">BLACK</label>
+                    </li>
+
+                  </ul>
+                </details>
+              </div>
+            </form>
+          </div>
+          <form action="/ssoil" method="post" class="bysoil">
+            <div class="soil">SOIL</div>
+            <details class="custom-select">
+              
+
+                <summary name="la" class="radios">
+                  <input
+                    type="radio"
+                    name="soill"
+                    id="default"
+                    title=">"
+                    checked
+                  />
+                  <input type="radio" name="item" id="soil1" title="ALLUVIAL SOIL" value="alluvial" />
+                  <input type="radio" name="item" id="soil2" title="RED SOIL" value="red"/>
+                  <input type="radio" name="item" id="soil3" title="BLACK SOIL" value="black"/>
+                </summary>
+                <ul class="list">
+                  <li>
+                    <label for="soil1">
+                      ALLUVIAL SOIL
+                     
+                    </label>
+                  </li>
+                  <li>
+                    <label for="soil2">RED SOIL</label>
+                  </li>
+                  <li>
+                    <label for="soil3">BLACK SOIL</label>
+                  </li>
+          
+                </ul>
+              </details>
+            
+            <div class="container">
+                <div class="btn"><button>GO</button>
+            </div>
+          </div>
+          </form>
+          
+          
+          
+        </div>
+    </div>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+    </style>
+    <script src="/scripts/home.js" type="module"></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

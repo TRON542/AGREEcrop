@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/searchopt.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--navbar-->
+
+    <nav class="navbar">
+      <div class="logo">
+        <img id="logo_pic" src="/assets/logo.png" />
+        <h3 id="name">AGREEcrop</h3>
+      </div>
+      <div class="namelogo">
+        <p style="letter-spacing: 5px">WELCOME <%= userr.usname %></p>
+      </div>
+      <div class="profile">
+        <img
+          src="/assets/profile.png"
+          class="main_profile"
+          id="main_profile_id"
+        />
+        <p class="prof1">PROFILE</p>
+        <div class="editview">
+          <img
+            src="/assets/eprofile.png"
+            class="edit_profile"
+            id="edit_profile_id"
+          />
+          <img
+            src="/assets/vprofile.jpeg"
+            class="view_profile"
+            id="view_profile_id"
+          />
+        </div>
+      </div>
+    </nav>
+
+    <!--second-->
+
+    <div class="front">
+      <div class="selection">
+        <div class="home" id="home">
+          <form action="/hom" method="post">
+            <button id="home_btn">HOME</button>
+          </form>
+        </div>
+        <div class="crops" id="crops">
+          <form action="/crp" method="post">
+            <button id="crop_btn">CROPS</button>
+          </form>
+        </div>
+        <div class="about" id="about">
+          <form action="/abt" method="post">
+            <button id="abt_btn">ABOUT</button>
+          </form>
+        </div>
+        <div class="contact" id="contact">
+          <form action="/contact" method="post">
+            <button id="contact_btn">CONTACT</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="searchedcrop">
+        <div class="topline">
+          <% if( no_of_crops == 0){ %>
+          <h1>No Data Found</h1>
+          <% } else if(sel == 1){ %>
+          <h1>Crops grown in <%= sel_inp[0] %> SOIL</h1>
+          <% } else if(sel == 2){ %>
+          <h1>Crops grown in <%= sel_inp[0] %> SEASON</h1>
+          <% } else if(sel == 3){ %>
+          <h1>
+            Crops grown in <%= sel_inp[0] %> in <%= sel_inp[1] %> Soil
+            <p class="agro"><%= agroclimate_rows[0][1] %></p>
+          </h1>
+
+          <% } else if(sel == 4){ %>
+          <h1><%= sel_inp[0] %> Info</h1>
+          <% } %>
+        </div>
+
+        <% for(var i=0 ; i< rows_send.length ; i++){%> <% if(i%2 == 0){ %>
+        <div class="coll1">
+          <div class="data">
+            <div class="name"><h1><%= rows_send[i][0] %></h1></div>
+            <div class="type">Type - <%= rows_send[i][6] %></div>
+            <div class="soil">
+              Can grow in <% if (rows_send[i][2] == 1){ %> alluvial soil <% }
+              if(rows_send[i][4] == 1){ %> , red soil <% } if(rows_send[i][3] ==
+              1){ %> , black soil <%} %>
+            </div>
+            <div class="season">Season - <%= rows_send[i][7] %></div>
+            <div class="tgp">
+              Growth Period requires <%= rows_send[i][8] %> to <%=
+              rows_send[i][9] %> days
+            </div>
+            <div class="waterreq">
+              Water requirement is from <%= rows_send[i][10] %> to <%=
+              rows_send[i][11] %>
+            </div>
+          </div>
+          <div class="photo">
+            <div class="pic"><img src="<%= rows_send[i][1] %>" /></div>
+          </div>
+        </div>
+        <% } else{ %>
+        <div class="coll1">
+          <div class="photo">
+            <div class="pic">
+              <img src="<%= rows_send[i][1] %>" />
+            </div>
+          </div>
+          <div class="data">
+            <div class="name"><h1><%= rows_send[i][0] %></h1></div>
+            <div class="type">Type - <%= rows_send[i][6] %></div>
+            <div class="soil">
+              Can grow in <% if (rows_send[i][2] == 1){ %> alluvial soil <% }
+              if(rows_send[i][4] == 1){ %> , red soil <% } if(rows_send[i][3] ==
+              1){ %> , black soil <%} %>
+            </div>
+            <div class="season">Season - <%= rows_send[i][7] %></div>
+            <div class="tgp">
+              Growth Period requires <%= rows_send[i][8] %> to <%=
+              rows_send[i][9] %> days
+            </div>
+            <div class="waterreq">
+              Water requirement is from <%= rows_send[i][10] %> to <%=
+              rows_send[i][11] %>
+            </div>
+          </div>
+        </div>
+        <% } %> <% } %>
+      </div>
+    </div>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+    </style>
+    <script src="/scripts/home.js" type="module"></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
+
+<!-- name , type(fruit veg or grain) , water req , npk-->
