@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Audiowide&family=Bangers&family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Audiowide&family=Bangers&family=Black+Ops+One&family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Audiowide&family=Bangers&family=Black+Ops+One&family=Martian+Mono:wght@600&family=Rock+Salt&display=swap");
+* {
+  margin: 0%;
+  box-sizing: border-box;
+  color: rgb(244, 228, 228);
+  text-shadow: 8px 2px 4px #342525;
+}
+body {
+  background-image: url(../assets/backofhill.jpg);
+  background-attachment: fixed;
+  background-size: 41cm;
+}
+/*navbar*/
+
+/*1*/
+
+.navbar {
+  height: 6rem;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(166, 63, 63, 0) -50%,
+    rgb(8, 12, 12) 80%
+  );
+  width: 100%;
+}
+
+#logo_pic {
+  height: 4rem;
+  margin: 1rem 3.2rem;
+}
+.navbar .logo {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+#name {
+  position: relative;
+  left: -50px;
+  font-size: 1.5rem;
+  color: grey;
+  text-shadow: 2px 2px 4px #ff0000;
+}
+
+/*2*/
+.namelogo {
+  font-size: 1.5rem;
+  text-shadow: 4px 2px 4px #ff0000;
+  color: grey;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0cm;
+  font-family: "Martian Mono", monospace;
+  box-shadow: 1px 8px 19px;
+  border-radius: 3rem;
+}
+
+/*3*/
+
+.profile {
+  height: 6rem;
+  display: grid;
+  grid-template-rows: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_profile,
+.edit_profile,
+.view_profile {
+  width: 3rem;
+  position: relative;
+
+  border-radius: 1rem;
+  cursor: pointer;
+  border: 2px;
+  border-style: solid;
+}
+.prof1 {
+  position: relative;
+  right: 7px;
+  width: 7rem;
+}
+
+.editview {
+  position: relative;
+  left: 10px;
+}
+
+.main_profile {
+  margin-top: 9px;
+  transition: 0.6s;
+}
+
+.main_profile:hover {
+  box-shadow: -1px 3px 20px;
+}
+
+.edit_profile {
+  transition: 1s;
+  position: relative;
+  width: 10px;
+}
+.edit_profile1 {
+  width: 40px;
+  position: relative;
+  top: 36px;
+  right: 47px;
+}
+
+.view_profile {
+  transition: 0.6s;
+  width: 10px;
+}
+.view_profile1 {
+  width: 40px;
+  position: relative;
+  top: 35px;
+}
+.view_profile1:hover,
+.edit_profile1:hover {
+  box-shadow: -1px 3px 20px;
+}
+.emainprof1 {
+  position: relative;
+  top: 10px;
+}
+
+/*SECOND*/
+
+.front {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: 20% 38% 28% 10%;
+  height: 500px;
+}
+
+/*1*/
+.home,
+.crops,
+.about,
+.contact {
+  padding-left: 4rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.home:hover,
+.crops:hover,
+.about:hover,
+.contact:hover {
+  box-shadow: -1px 3px 20px;
+}
+
+.selection {
+  display: grid;
+  grid-template-rows: 10% 10% 10% 10%;
+  border-right: 0.5mm solid;
+}
+
+#home_btn,
+#crop_btn,
+#abt_btn,
+#contact_btn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/*2*/
+
+.searchedcrop {
+  display: grid;
+  grid-template-columns: 100% 100%;
+}
+
+.data {
+  display: grid;
+  grid-template-rows: 15% 10% 10% 10% 10%;
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 380px;
+}
+
+.pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 440px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(166, 63, 63, 0) 20%,
+    rgb(38, 73, 73) 80%
+  );
+}
+
+.pic img {
+  height: 250px;
+  width: 390px;
+  background-color: blueviolet;
+}
+
+.aboutt {
+  margin-left: 50px;
+}
+.aboutt h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.aboutt h4 {
+  width: 850px;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
